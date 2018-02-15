@@ -1,0 +1,38 @@
+# src/WA/WAAnnonceBundle/Resources/config/routing.yml
+
+wa_annonce_home:
+    path:      /{page}
+    defaults:
+        _controller: WAAnnonceBundle:Annonce:index
+        page:        1
+    requirements:
+        page: \d*
+
+wa_annonce_add:
+    path:      /annonce/add
+    defaults:
+        _controller: WAAnnonceBundle:Annonce:add
+        
+wa_annonce_view:
+    path:      /annonce/{id}
+    defaults:
+        _controller: WAAnnonceBundle:Annonce:view
+    requirements:
+        id: \d+
+        format : html|xml
+
+wa_annonce_edit:
+    path:      /annonce/edit/{id}
+    defaults:
+        _controller: WAAnnonceBundle:Annonce:edit
+    requirements:
+        id: \d+
+        format : html|xml
+
+wa_annonce_delete:
+    path:      /annonce/delete/{id}
+    defaults:
+        _controller: WAAnnonceBundle:Annonce:delete
+    requirements:
+        id: \d+
+        format : html|xml

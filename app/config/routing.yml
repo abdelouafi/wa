@@ -1,0 +1,4 @@
+wa_annonce:
+    resource: "@WAAnnonceBundle/Resources/config/routing.yml"
+    prefix:   /wa
+
